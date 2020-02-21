@@ -12,7 +12,7 @@
 
   <text x="300" y="125" font-size="60" text-anchor="middle" fill="blue">Salut</text>
 
-    <text x="300" y="300" font-size="60" text-anchor="middle"
+  <text x="300" y="300" font-size="60" text-anchor="middle"
         font-weight="bold" fill="none" stroke="black"
         stroke-dasharray="300" stroke-dashoffset=${offset}>Salut</text>
 
