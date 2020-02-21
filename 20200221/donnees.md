@@ -1,7 +1,5 @@
-
-
 ## D'où viennent-elles?
-Elles viennent de datahub.io
+Elles viennent de datahub.io : https://github.com/lsv/fifa-worldcup-2018
 
 et voici le lien permettant d'accèder au fichier JSON:
 https://raw.githubusercontent.com/lsv/fifa-worldcup-2018/master/data.json
