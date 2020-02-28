@@ -3,9 +3,9 @@ const webpack = require('webpack');
 
 module.exports = {
   mode: 'production',
-  entry: ['babel-polyfill', './src/main_app.js'],
+  entry: ['babel-polyfill', './src/index.js'],
   output: {
-    filename: 'bundle_app.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   watch: false,
@@ -44,6 +44,9 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'
-    })
+    }), 
+    {
+      "plugins": ["@babel/plugin-proposal-class-properties"]
+    }
   ]
 };

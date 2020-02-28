@@ -1,36 +1,34 @@
-export default class Circle {
-    //nommé Circle l'instance de cette classe est une redondance, du coup nommer comme on veut lors de l'import
-    constructor(x, y, radius, speed, color, colorBorder) {
-        this.x = x;
-        this.y = y;
-        this.radius = radius;
-        this.speed = speed;
-        this.color = color || "red";
-        this.colorBorder = colorBorder || "red";
+export default class Data {
+    constructor () {
+        this.countTagdataChampions = require('./lolChampions.json.js')
+        this.champions = dataChampions.data;
+        this.clearedData = [];
+        this.champTags = [];
+        this.countTag = [];
     }
 
-    //draw a circle
-    draw(ctx) {
-        ctx.beginPath();
-        ctx.strokeStyle = this.colorBorder;
-        ctx.fillStyle = this.color;
-        ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
-        ctx.fill()
-        ctx.stroke();
-    }
-
-    //move a circle 
-    move(dt, direction) {
-        this.x += this.speed * dt * Math.cos(direction);
-        this.y += this.speed * dt * Math.sin(direction);
-    }
-
-    //sort with radius
-    sortRadius(a, b) {
-        return a.radius - b.radius;
-    }
-
-    isCollidingWith(x, y, r = 0) {
-        return Math.pow(x - this.x, 2) + Math.pow(y - this.y, 2) <= Math.pow(this.r + r, 2);
+    clearData = () => {
+        for (const name in this.champions) {
+            //console.log(`${name}: ${champions[name]}`);
+            this.clearedData.push(this.champions[name]);
+        }
+        for (let i = 0; i < this.clearedData.length; i++) {
+        }
+        
+        this.clearedData.forEach(champ => {
+            (champ.tags).forEach(tag => {
+                champTags.push(tag)
+                if (!this.countTag.includes(tag)) {
+                    this.countTag.push(tag);
+                    this.countTag[tag] = 0;
+                } else if(this.countTag.includes(tag)) {
+                    this.countTag[tag]++;
+                }
+            })
+        });
+        this.countTag.forEach((role, key) => {
+            this.countTag[key] = ({"tag": role, "count": this.countTag[element]})
+        });
+        return this.countTag;
     }
 }
