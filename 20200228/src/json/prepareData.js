@@ -1,7 +1,7 @@
 export default class Data {
     constructor () {
-        this.countTagdataChampions = require('./lolChampions.json.js')
-        this.champions = dataChampions.data;
+        this.dataChampions = require('./lolChampions.json')
+        this.champions = this.dataChampions.data;
         this.clearedData = [];
         this.champTags = [];
         this.countTag = [];
@@ -17,7 +17,7 @@ export default class Data {
         
         this.clearedData.forEach(champ => {
             (champ.tags).forEach(tag => {
-                champTags.push(tag)
+                this.champTags.push(tag)
                 if (!this.countTag.includes(tag)) {
                     this.countTag.push(tag);
                     this.countTag[tag] = 0;
@@ -27,8 +27,18 @@ export default class Data {
             })
         });
         this.countTag.forEach((role, key) => {
-            this.countTag[key] = ({"tag": role, "count": this.countTag[element]})
+            this.countTag[key] = ({"tag": role, "count": this.countTag[role]})
         });
         return this.countTag;
+    }
+
+    getNumber(datas) {
+        let tabNumbers = [];
+        let tabTags = [];
+        datas.forEach(Element => {
+            tabNumbers.push(Element.count);
+            tabNumbers.push(Element.tag);
+        });
+        return tabNumbers, tabTags
     }
 }
