@@ -1,35 +1,32 @@
 {
-  "name": "DataVis",
+  "name": "mobileapps",
   "version": "1.0.0",
-  "description": "[Cours 1 - 21 février 2020](https://github.com/JeanHerbaut/DataVis/tree/master/20200221)",
-  "main": "index.js",
-  "dependencies": {
-    "d3": "^5.15.0",
-    "jquery": "^3.4.1",
-    "json": "^9.0.6",
-    "parcel-bundler": "^1.12.4"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.8.6",
-    "@babel/preset-env": "^7.8.6",
-    "babel-loader": "^8.0.6",
-    "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11"
-  },
+  "main": "dist/bundle.js",
   "scripts": {
     "preview": "live-server dist/",
     "build": "webpack",
     "watch": "webpack --mode=development --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JeanHerbaut/DataVis.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JeanHerbaut/DataVis/issues"
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "css-loader": "^3.4.2",
+    "handlebars-loader": "^1.7.1",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.10"
   },
-  "homepage": "https://github.com/JeanHerbaut/DataVis#readme"
+  "dependencies": {
+    "handlebars": "^4.7.3",
+    "jquery": "^3.4.1",
+    "konami": "^1.6.2",
+    "mainloop.js": "^1.0.4",
+    "randomcolor": "^0.5.4"
+  },
+  "description": ""
 }

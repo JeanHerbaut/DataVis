@@ -3,9 +3,9 @@ const webpack = require('webpack');
 
 module.exports = {
   mode: 'production',
-  entry: './src/index.js',
+  entry: ['babel-polyfill', './src/main_app.js'],
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle_app.js',
     path: path.resolve(__dirname, 'dist')
   },
   watch: false,
@@ -20,7 +20,18 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
-      }
+      }, 
+      { 
+        test:/\.css$/,
+        use: [ 'style-loader', {
+          loader: 'css-loader',
+          options: {url: false} 
+        }]        
+      },
+      {
+        test: /\.handlebars$/,
+        use: 'handlebars-loader'
+      }  
     ]
   },
   resolve: {
