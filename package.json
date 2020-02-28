@@ -4,7 +4,8 @@
   "description": "[Cours 1 - 21 février 2020](https://github.com/JeanHerbaut/DataVis/tree/master/20200221)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:batons": "parcel 20200228/src/index.html --out-dir 20200228/dist"
   },
   "repository": {
     "type": "git",
