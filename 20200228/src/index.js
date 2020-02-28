@@ -13,6 +13,9 @@ ul.selectAll('li')
     .text(d => JSON.stringify(d))
 
 let numero = DB.getNumber(datas);
+let tags = DB.getTags(datas);
+
+console.log(numero);
     const WIDTH = 1000
     const HEIGHT = 1000 / 3
     const MARGIN = 5

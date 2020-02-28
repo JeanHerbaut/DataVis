@@ -34,11 +34,16 @@ export default class Data {
 
     getNumber(datas) {
         let tabNumbers = [];
-        let tabTags = [];
         datas.forEach(Element => {
             tabNumbers.push(Element.count);
-            tabNumbers.push(Element.tag);
         });
-        return tabNumbers, tabTags
+        return tabNumbers
+    }
+    getTags(datas) {
+        let tabTags = [];
+        datas.forEach(Element => {
+            tabTags.push(Element.count);
+        });
+        return tabTags
     }
 }
