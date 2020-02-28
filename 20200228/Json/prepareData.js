@@ -1,27 +1,35 @@
-const dataChampions = require('./lolChampions.json')
-const champions = dataChampions.data;
-let clearedData = [];
-let champTags = [];
-let countTag = [];
-for (const name in champions) {
-    //console.log(`${name}: ${champions[name]}`);
-    clearedData.push(champions[name]);
-}
-for (let i = 0; i < clearedData.length; i++) {
-}
+export default class {
+    constructor () {
+        this.countTagdataChampions = require('./lolChampions.json')
+        this.champions = dataChampions.data;
+        this.clearedData = [];
+        this.champTags = [];
+        this.countTag = [];
+    }
 
-clearedData.forEach(champ => {
-    (champ.tags).forEach(tag => {
-        champTags.push(tag)
-        if (!countTag.includes(tag)) {
-            countTag.push(tag);
-            countTag[tag] = 0;
-        } else if(countTag.includes(tag)) {
-            countTag[tag]++;
+    clearData = () => {
+        for (const name in this.champions) {
+            //console.log(`${name}: ${champions[name]}`);
+            this.clearedData.push(this.champions[name]);
         }
-    })
-});
-countTag.forEach((element, key) => {
-    countTag[key] = ({"tag": element, "count": countTag[element]})
-});
-console.log(countTag[0]);
+        for (let i = 0; i < this.clearedData.length; i++) {
+        }
+        
+        this.clearedData.forEach(champ => {
+            (champ.tags).forEach(tag => {
+                champTags.push(tag)
+                if (!this.countTag.includes(tag)) {
+                    this.countTag.push(tag);
+                    this.countTag[tag] = 0;
+                } else if(this.countTag.includes(tag)) {
+                    this.countTag[tag]++;
+                }
+            })
+        });
+        this.countTag.forEach((role, key) => {
+            this.countTag[key] = ({"tag": role, "count": this.countTag[element]})
+        });
+        return this.countTag;
+    }
+
+}
