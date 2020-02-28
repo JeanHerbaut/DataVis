@@ -1,0 +1,26 @@
+{
+  "name": "DataVis",
+  "version": "1.0.0",
+  "description": "[Cours 1 - 21 février 2020](https://github.com/JeanHerbaut/DataVis/tree/master/20200221)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeanHerbaut/DataVis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeanHerbaut/DataVis/issues"
+  },
+  "homepage": "https://github.com/JeanHerbaut/DataVis#readme",
+  "dependencies": {
+    "d3": "^5.15.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
