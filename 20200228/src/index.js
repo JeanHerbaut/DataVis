@@ -15,29 +15,56 @@ ul.selectAll('li')
 let numero = DB.getNumber(datas);
 let tags = DB.getTags(datas);
 
-console.log(numero);
     const WIDTH = 1000
-    const HEIGHT = 1000 / 3
-    const MARGIN = 5
-    const BAR_WIDTH = WIDTH / numero.length
-    const svg = body.append('svg').attr('width', WIDTH).attr('height', HEIGHT)
-    
-    // nous allons utiliser une échelle linéaire
-    const heightScale = d3.scaleLinear()
-      // les données en entrée
-      .domain([0, d3.max(numero)]) // d3.max retourne le maxium d'une liste
-      // les données en sortie
-      .range([0, HEIGHT])
-    
-    // comme 8 est la valeur maximale, heightScale(8) retourne la hauteur HEIGHT
-    // heightScale(4) retourne la moitié de HEIGHT ...
-    
-    svg.selectAll('rect')
-      .data(numero)
-      .enter()
-      .append('rect')
-      .attr('x', (d, i) =>  i * BAR_WIDTH)
-      .attr('width', BAR_WIDTH - MARGIN)
-      // utiliser heightScale pour y et height
-      .attr('y', d => HEIGHT - heightScale(d))
-      .attr('height', heightScale)
+  const HEIGHT = 1000 / 3
+  const MARGIN = 5
+  const MARGIN_BOTTOM = HEIGHT / 10
+  const GRAPH_HEIGHT = HEIGHT - MARGIN_BOTTOM
+  const MARGIN_LEFT = WIDTH / 20
+  const GRAPH_WIDTH =  WIDTH - MARGIN_LEFT
+  
+  console.log(datas);
+  
+  //const svg = d3.select('body')
+  const svg = body.append('svg').attr('width', WIDTH).attr('height', HEIGHT)
+
+  const BAR_WIDTH = GRAPH_WIDTH / datas.length
+  
+  const yScale = d3.scaleLinear()
+    .domain([0, d3.max(datas, d => d.count)])
+    .range([GRAPH_HEIGHT, 0])
+  
+  const bars = svg.append('g')
+     .attr('transform', `translate(${MARGIN_LEFT}, 0)`)
+  
+  bars.selectAll('rect')
+    .data(datas)
+    .enter()
+    .append('rect')
+    .attr('x', (d, i) =>  i * BAR_WIDTH)
+    .attr('width', BAR_WIDTH - MARGIN)
+    .attr('y', d => yScale(d.count))
+    .attr('height', d => GRAPH_HEIGHT - yScale(d.count))
+    .attr('fill', 'steelblue')
+  
+  const cityNames = svg.append('g')
+    .attr('transform', `translate(${MARGIN_LEFT}, 0)`)
+  
+  cityNames.selectAll('text')
+    .data(datas)
+    .enter()
+    .append('text')
+    .attr('x', (d, i) => i * BAR_WIDTH + BAR_WIDTH / 2)
+    .attr('y', HEIGHT - MARGIN_BOTTOM + 20)
+    .attr('text-anchor', 'middle')
+    .attr('font-family', 'sans-serif')
+    .attr('font-size', 10)
+    .text(d => d.tag)
+  
+  const axisY = d3.axisLeft().scale(yScale)
+    .tickFormat(d => d)
+    .ticks(5)
+
+  svg.append('g')
+    .attr('transform', `translate(${MARGIN_LEFT - 3})`)
+    .call(axisY)
