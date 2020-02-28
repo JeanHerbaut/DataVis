@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:batons": "parcel 20200228/src/index.html --out-dir 20200228/dist"
+    "dev:batons": "parcel 20200228/src/index_lol.html --out-dir 20200228/dist"
   },
   "repository": {
     "type": "git",
