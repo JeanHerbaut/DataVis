@@ -7,7 +7,7 @@ export default class Data {
         this.countTag = [];
     }
 
-    clearData = () => {
+    clearData() {
         for (const name in this.champions) {
             //console.log(`${name}: ${champions[name]}`);
             this.clearedData.push(this.champions[name]);

@@ -45,8 +45,5 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery'
     }), 
-    {
-      "plugins": ["@babel/plugin-proposal-class-properties"]
-    }
   ]
 };
