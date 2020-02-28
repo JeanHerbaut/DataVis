@@ -1,6 +1,5 @@
 const dataChampions = require('./lolChampions.json')
 const champions = dataChampions.data;
-console.log(champions.Aatrox)
 let clearedData = [];
 let champTags = [];
 let countTag = [];
@@ -22,5 +21,7 @@ clearedData.forEach(champ => {
         }
     })
 });
-
-console.log(countTag);
+countTag.forEach((element, key) => {
+    countTag[key] = ({"tag": element, "count": countTag[element]})
+});
+console.log(countTag[0]);
