@@ -2,6 +2,7 @@ import * as d3 from 'd3'
 import DATAS from 'json/prepareData.js';
 const DB = new DATAS();
 let datas = DB.clearData();
+console.log(datas);
 const body = d3.select('body');
 
 const ul = body.append('ul');
