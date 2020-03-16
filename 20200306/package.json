@@ -1,7 +1,6 @@
 {
   "name": "20200306",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "preview": "live-server",
@@ -24,5 +23,6 @@
     "d3": "^5.15.0",
     "jquery": "^3.4.1",
     "ramda": "^0.27.0"
-  }
+  },
+  "description": ""
 }
