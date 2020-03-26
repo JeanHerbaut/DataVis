@@ -24,4 +24,3 @@ fetch('https://jsonplaceholder.typicode.com/posts')
             //tabUser[element.userId].push(element)
         }))
     )
-
