@@ -1,0 +1,3 @@
+### Quel message veut faire passer Rosling?
+
+Rosling cherche à représenter des données de façon agréable et compréhensible pour tout le monde. Il précise également que ces bulles de couleurs représentent seulement une moyenne pour un certain nombre d'individus et qu'il est possible de les fractionner pour pouvoir être plus précis. Ce mode de représentation de données permets une comparaison facile des données et également une meilleure compréhesion grâce à une visualisation spatiale et dans le temps. 
