@@ -1,0 +1,1 @@
+Le télétravail est facile pour l'ingénieur des médias pour les branches les plus techniques. En revanche, pour les échanges humains, il est nécessaire d'utiliser une webcam et un micro afin de garder un soupçon de contact "réel". Tout faire par message enlève de la motivation, de la concentration et de la qualité. 
