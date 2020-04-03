@@ -6,4 +6,6 @@
 
 [Cours 3 - 6 mars 2020](https://github.com/JeanHerbaut/DataVis/tree/master/20200306)
 
+ [Exercices:](https://github.com/JeanHerbaut/DataVis/tree/master/exercices)
+
 [Projet de groupe](https://github.com/JeanHerbaut/DataVis/tree/master/projet)
