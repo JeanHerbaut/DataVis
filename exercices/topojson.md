@@ -1,0 +1,1 @@
+Le topojson diffère du geoJson par le traitement des points géographiques. En effet, en GEOjson, certains points par exemple des frontières entre deux pays peuvent se superposer ce qui rend la donnée plus lourd. Le topojdon empêche cette superposition en regroupant les points en arc (traits unis) 
